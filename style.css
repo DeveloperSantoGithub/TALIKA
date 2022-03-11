@@ -1,0 +1,179 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(
+    120deg,
+    rgb(107, 107, 211),
+    rgb(142, 84, 209)
+  );
+  color: white;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+  font-size: 2rem;
+}
+
+header h1 span {
+  font-size: 7.5rem;
+  color: rgb(32, 32, 32);
+}
+
+header,
+form {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form input,
+form button {
+  padding: 0.5rem;
+  margin: 0.3rem;
+  font-size: 1.5rem;
+  background: white;
+  border: none;
+  border-radius: 0.5rem;
+}
+
+form button {
+  color: rgb(107, 107, 211);
+  background: white;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+}
+form button:hover {
+  color: white;
+  background: rgb(107, 107, 211);
+}
+
+.todo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.todo-list {
+  min-width: 30%;
+  list-style: none;
+}
+
+.todo {
+  margin: 0.5rem;
+  background: white;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0.5rem;
+  transition: all 0.5s ease;
+}
+
+.todo li {
+  flex: 1;
+  padding: 0rem 1rem;
+  font-size: 1rem;
+}
+
+.delete-btn,
+.check-btn {
+  background: rgb(255, 106, 7);
+  color: white;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.delete-btn {
+  border-radius: 0 0.4rem 0.4rem 0;
+}
+
+.check-btn {
+  background: rgb(31, 228, 31);
+}
+
+.fa-trash,
+.fa-check {
+  pointer-events: none;
+}
+
+@media screen and (max-width: 864px) {
+  .todo-list {
+    min-width: 75%;
+  }
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.fall {
+  transform: translateX(20rem);
+  opacity: 0;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
+  /* border-radius: 0.5rem; */
+}
+
+.select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+select {
+  color: rgb(107, 107, 211);
+  font-weight: 600;
+  width: 10rem;
+  cursor: pointer;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  background: rgb(107, 107, 211);
+  top: 0;
+  right: 0;
+  pointer-events: none;
+  padding: 0.7rem;
+  width: 1.2rem;
+  border-radius: 0 0.4rem 0.4rem 0;
+  transition: all 0.5s ease;
+}
+
+.select:hover::after {
+  color: rgb(107, 107, 211);
+  background: white;
+}
+
+@media screen and (max-width: 585px) {
+  form input {
+    width: 60vw;
+    margin-left: 1rem;
+  }
+
+  .select {
+    border-radius: 0.5rem;
+    width: 2.8rem;
+  }
+  .select::after {
+    background: white;
+    color: rgb(107, 107, 211);
+  }
+}
