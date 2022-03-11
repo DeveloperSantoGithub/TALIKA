@@ -105,9 +105,37 @@ form button:hover {
   pointer-events: none;
 }
 
+/* Vertical Text  */
+.v-text {
+  position: absolute;
+  width: 90%;
+  bottom: 4%;
+  left: 2%;
+}
+
+.v-text h3 {
+  letter-spacing: 0.3rem;
+  word-spacing: 1.5px;
+  display: inline;
+  background: #202020;
+  color: #f0f0f0;
+  border-radius: 10px;
+  padding: 5px;
+  transition: all ease 0.5s;
+}
+
+.v-text h3:hover {
+  color: #202020;
+  background: #f0f0f0;
+}
+
 @media screen and (max-width: 864px) {
   .todo-list {
     min-width: 75%;
+  }
+
+  .v-text {
+    display: none;
   }
 }
 
